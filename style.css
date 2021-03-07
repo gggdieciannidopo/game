@@ -1,0 +1,36 @@
+html {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  color: white;
+  font-family: Tahoma;
+}
+
+.messaggio {
+  max-width: 30vw;
+  min-width: 250px; 
+  position: absolute;
+  top: 30vh;
+  left: 15vw;
+  line-height: 25px;
+}
+
+.messaggio h1 {
+  font-size: 50px;
+  line-height: 60px;
+  font-family: Tahoma;
+  font-weight: 300;
+}
+
+.messaggio h2 {
+  font-family: Tahoma;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.messaggio h3 {
+  font-family: Tahoma;
+  font-weight: 200;
+  font-size: 18px;
+  opacity: 0.50;
+}
