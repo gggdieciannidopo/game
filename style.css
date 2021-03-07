@@ -56,4 +56,5 @@ body {
   position: absolute;
   max-height: 300px;
   filter: grayscale();
+  -webkit-filter: grayscale();
 }
