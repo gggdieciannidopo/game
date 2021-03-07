@@ -21,6 +21,7 @@
 
     <body>
 			<div class="se-pre-con"></div>
+			<img src="img/sito.png" class="sfondo" id="sfondo">
 			<div class="messaggio" id="messaggio">
 			 <h1>Ops!</h1>
 				<h2>Siamo spiacenti ma il supporto su cui sta cercando di giocare non sembra il più adatto.</h2>
@@ -32,6 +33,7 @@
 
 					if (window.innerWidth > 1024){
 						document.getElementById("messaggio").style.display = "none";
+						document.getElementById("sfondo").style.display = "none";
 						var game = new Phaser.Game(1024, 768, Phaser.AUTO, "game");
 					game.state.add("boot", boot);
 					game.state.add("preload", preload);
@@ -46,6 +48,7 @@
 				}
 				if (window.innerWidth <= 1024){
 					document.getElementById("messaggio").style.display = "block";
+					document.getElementById("sfondo").style.display = "block";
 
 			}
 
