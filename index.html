@@ -10,16 +10,18 @@
 		<script src="state/instruction.js"></script>
         <script src="state/credits.js"></script>
 		<script src="state/thegame.js"></script>
-        <script src="state/gameover.js"></script>	
+        <script src="state/gameover.js"></script>
 		<script src="state/gameover_positivo.js"></script>
     	<style>
-    		body{margin:0; 
+    		body{margin:0;
 			background-color: black}
         </style>
-        
+
 		<script>
-			(function () {
+			(function inizia() {
 				var game = new Phaser.Game(1024, 768, Phaser.AUTO, "game");
+
+				if (window.innerWidth > 500){
 				game.state.add("boot", boot);
 				game.state.add("preload", preload);
                 game.state.add("gametitle", gametitle);
@@ -30,12 +32,13 @@
 				game.state.add("gameover", gameover);
 				game.state.add("gameover_positivo", gameover_positivo);
 				game.state.start("boot");
-				
-			})();    
+			}
+			})();
 		</script>
     </head>
 
     <body>
+			<button type="button" name="button" onclick="inizia">inizia</button>
     </body>
 
 </html>
