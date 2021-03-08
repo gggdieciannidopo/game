@@ -1,7 +1,7 @@
 var preload = function(game){}
 
 preload.prototype = {
-	preload: function(){
+	preload: function(){ 
         this.game.load.spritesheet('menu', 'img_storia/menu-08.jpg', 1024, 768);
         this.game.load.image('gameover', 'img_storia/gameover.jpg');
         this.game.load.image('gameoverpositivo', 'img_storia/gameoverpositivo.jpg');
@@ -87,11 +87,11 @@ preload.prototype = {
 
         this.game.load.spritesheet('cannone', 'img/cannone-sprite.png', 504.33, 428);
 
-        this.game.load.audio('menuaudio','audio/menuaudio.mp3');
-        this.game.load.audio('gameaudio','audio/Jammin.mp3');
-        this.game.load.audio('audiocannone','audio/cannone.mp3');
-        this.game.load.audio('audiofuochi','audio/fuochi.mp3');
-        this.game.load.audio('audioggg','audio/flauto.mp3');
+        this.game.load.audio('menuaudio','audio/menuaudio.MP3');
+        this.game.load.audio('gameaudio','audio/Jammin.MP3');
+        this.game.load.audio('audiocannone','audio/cannone.MP3');
+        this.game.load.audio('audiofuochi','audio/fuochi.MP3');
+        this.game.load.audio('audioggg','audio/flauto.MP3');
 
 	},
   	create: function(){

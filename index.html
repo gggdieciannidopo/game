@@ -16,6 +16,8 @@
 		<script src="state/gameover_positivo.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+<script src="mobile-detect.js"></script>
+
 
     </head>
 
@@ -30,10 +32,23 @@
 			 	<h3>Assicurati di star giocando da computer e che la finestra di gioco sia abbastanza grande.</h3>
 			</div>
 			<script>
+
 				(function () {
 
+					var md = new MobileDetect(window.navigator.userAgent);
 
-					if (window.innerWidth > 1024){
+					if (md.mobile()){
+						document.getElementById("messaggio").style.display = "block";
+						document.getElementById("sfondo").style.display = "block";
+				}
+
+				else if (window.innerWidth <= 1024){
+					document.getElementById("messaggio").style.display = "block";
+					document.getElementById("sfondo").style.display = "block";
+
+			}
+
+				 else if (window.innerWidth > 1024){
 						document.getElementById("messaggio").style.display = "none";
 						document.getElementById("sfondo").style.display = "none";
 						var game = new Phaser.Game(1024, 768, Phaser.AUTO, "game");
@@ -48,7 +63,8 @@
 					game.state.add("gameover_positivo", gameover_positivo);
 					game.state.start("boot");
 				}
-				if (window.innerWidth <= 1024){
+
+				if ((window.innerWidth > 1024) || (md.mobile())){
 					document.getElementById("messaggio").style.display = "block";
 					document.getElementById("sfondo").style.display = "block";
 

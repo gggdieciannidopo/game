@@ -2,15 +2,15 @@ html {
   height: 100vh;
   width: 100vw;
   background-color: black;
-  color: white;
-  font-family: Arial;
-  margin: 0px;
 }
 
 body {
   margin: 0px;
   height: 100vh;
   width: 100vw;
+  color: white;
+  font-family: Arial;
+  font-style: normal;
 }
 
 .messaggio {
@@ -51,7 +51,7 @@ body {
 	width: 100%;
 	height: 100%;
 	z-index: 9999;
-	background: url(img/clessidra.png) center no-repeat black;
+	background: url(clessidra.gif) center no-repeat black;
 }
 
 .sfondo {
